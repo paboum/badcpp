@@ -12,7 +12,7 @@ type Trace struct {
 
 func (t Trace) Print(s string) {
 	if t.noisy {
-		fmt.Fprintf(t.F, "%s\n", s)
+		_, _ = fmt.Fprintf(t.F, "%s\n", s)
 	}
 }
 
