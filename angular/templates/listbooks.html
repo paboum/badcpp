@@ -1,0 +1,24 @@
+<h1>Książki</h1>
+<table hx-target="closest tr" hx-swap="outerHTML">
+  <tr>
+    <th>Autor</th>
+    <th>Tytuł</th>
+    <th>Data</th>
+    <th></th>
+    <th></th>
+  </tr>
+  {{range .books}}
+    {{ template "viewbook.html" . }}
+    {{else}}
+    <tr><td>Nie ma książek.</td></tr>
+  {{end}}
+  <tr>
+    <form hx-post="/books" hx-target="closest tr" hx-swap="beforebegin" hx-ext="json-enc">
+    <td><input name="title" /></td>
+    <td><input name="author" /></td>
+    <td><input name="date" type="number" /></td>
+    <td><button class="btn">Dodaj</button></td>
+    <td></td>
+    </form>
+  </tr>
+</table>

@@ -1,0 +1,8 @@
+<tr>
+  <td>{{.Codec}}</td>
+  <td>{{.Starring}}</td>
+  <td>{{.Rating}}</td>
+  <td><button class="btn" hx-delete="/movies/{{.Id}}">Usuń (Id={{.Id}})</button></td>
+  <td><button class="btn" hx-get="/movies/{{.Id}}/edit">Edytuj (Id={{.Id}})</button></td>
+  </td>
+</tr>

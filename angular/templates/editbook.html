@@ -1,0 +1,8 @@
+<tr>
+  <td><input name="title"  value="{{.Title}}"></input></td>
+  <td><input name="author" value="{{.Author}}"></input></td>
+  <td><input name="date"  value="{{.Date}}" type="number"></input></td>
+  <td><button class="btn" hx-get="/books/{{.Id}}">Anuluj (Id={{.Id}})</td>
+  <td><button class="btn" hx-put="/books/{{.Id}}" hx-include="closest tr" hx-ext="json-enc">Zapisz (Id={{.Id}})</td>
+  </td>
+</tr>

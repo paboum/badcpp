@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <link rel="icon" type="image/x-icon" href="/s/favicon.ico">
+    <link rel="stylesheet" href="./s/style.css">
+    <script src="./s/htmx.min.js"></script>
+    <script src="https://unpkg.com/htmx.org/dist/ext/json-enc.js"></script>
+  </head>
+  <body>
+    <div class="c">
+      {{ template "listbooks.html" . }}
+      {{ template "listmovies.html" . }}
+    </div>
+  </body>
+</html>

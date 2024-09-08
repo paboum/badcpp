@@ -1,0 +1,24 @@
+<h1>Filmy</h1>
+<table hx-target="closest tr" hx-swap="outerHTML">
+  <tr>
+    <th>Kodek</th>
+    <th>Występują</th>
+    <th>Ocena</th>
+    <th></th>
+    <th></th>
+  </tr>
+  {{range .movies}}
+    {{ template "viewmovie.html" . }}
+    {{else}}
+    <tr><td>Nie ma filmów.</td></tr>
+  {{end}}
+  <tr>
+    <form hx-post="/movies" hx-target="closest tr" hx-swap="beforebegin" hx-ext="json-enc">
+    <td><input name="codec" /></td>
+    <td><input name="starring" /></td>
+    <td><input name="rating" type="number" /></td>
+    <td><button class="btn">Dodaj</button></td>
+    <td></td>
+    </form>
+  </tr>
+</table>

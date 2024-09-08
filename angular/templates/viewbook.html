@@ -1,0 +1,8 @@
+<tr>
+  <td>{{.Title}}</td>
+  <td>{{.Author}}</td>
+  <td>{{.Date}}</td>
+  <td><button class="btn" hx-delete="/books/{{.Id}}">Usuń (Id={{.Id}})</button></td>
+  <td><button class="btn" hx-get="/books/{{.Id}}/edit">Edytuj (Id={{.Id}})</button></td>
+  </td>
+</tr>

@@ -1,0 +1,8 @@
+<tr>
+  <td><input name="codec"  value="{{.Codec}}"></input></td>
+  <td><input name="starring" value="{{.Starring}}"></input></td>
+  <td><input name="rating"  value="{{.Rating}}" type="number"></input></td>
+  <td><button class="btn" hx-get="/movies/{{.Id}}">Anuluj (Id={{.Id}})</td>
+  <td><button class="btn" hx-put="/movies/{{.Id}}" hx-include="closest tr" hx-ext="json-enc">Zapisz (Id={{.Id}})</td>
+  </td>
+</tr>
